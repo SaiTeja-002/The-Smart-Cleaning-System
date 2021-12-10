@@ -8,8 +8,8 @@
 #define SPEEDFRONT 165  //The speed with which the rover moves
 #define WAIT 300        //Delay for the rover to turn 
 #define SERVOWAIT 1000  //Time period for which the Servo stays at a particular position
-#define WAITLEFT 490
-#define WAITRIGHT 600
+#define WAITLEFT 490    
+#define WAITRIGHT 600   
 
 //Servo Constants
 #define LEFT 180    //At this angle, the ultrasonic sensor looks left
@@ -17,8 +17,8 @@
 #define AHEAD 90    //Default angle of the Servo motor. At this angle, the ultrasonic sensor looks ahead
 
 //UltraSonic sensor constants
-#define TRIGGER A0    //Analog pin 5 of arduino is connected to the "Trigger" of the Ultrasonic sensor
-#define ECHO A1       //Analog pin 0 of arduino is connected to the "Echo" of the Ultrasonic sensor
+#define TRIGGER A0    //Analog pin 0 of arduino is connected to the "Trigger" of the Ultrasonic sensor
+#define ECHO A1       //Analog pin 1 of arduino is connected to the "Echo" of the Ultrasonic sensor
 #define THRESHOLD 20  //The distance of 20cm is taken as the threshold distance
 
 //Pump variables
@@ -26,9 +26,9 @@
 #define PUMPSPEED 190
 
 //Motor Variables
-AF_DCMotor right(4, MOTOR34_64KHZ);
-AF_DCMotor left(3, MOTOR34_64KHZ);
-AF_DCMotor pump(1, MOTOR12_1KHZ);
+AF_DCMotor right(4, MOTOR34_64KHZ);     //The wheels on the right side are connected to the M4 of the motor-shield
+AF_DCMotor left(3, MOTOR34_64KHZ);      //The wheels on the left side are connected to the M3 of the motor-shield
+AF_DCMotor pump(1, MOTOR12_1KHZ);       //The DC motor is connected to the M1 of the motor-shield
 
 //Servo
 Servo angle; 
@@ -38,7 +38,8 @@ NewPing detect(TRIGGER, ECHO, 400); //default value -> 500cm
 #define TIMEOUT 200
 
 /*Direction Control 
-(Left -> -1 || Right -> 1)*/
+(Left -> -1 || Right -> 1)
+Changes accordingly when an obstacle is detected*/
 int controlVal = -1;
 int controlNum = 0;
 
