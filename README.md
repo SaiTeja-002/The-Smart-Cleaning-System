@@ -1,4 +1,4 @@
-# The-smart-Cleaning-System
+# The-Smart-Cleaning-System
 ![SCS](https://user-images.githubusercontent.com/95877599/145456517-422e44e4-6e0c-442c-8d55-d07fad29584a.png)<br />
 Hey there! Welcome to the repo!<br/><br/>
 This is a 3rd semester Electronics project made by a group of 6 students:
